@@ -66,8 +66,8 @@ def profile():
 		return redirect('/')
 
 @app.route('/delete/<int:id>')
+
 def erase(id):
-	
 	# deletes the data on the basis of unique id and
 	# directs to home page
 	data = Profile.query.get(id)

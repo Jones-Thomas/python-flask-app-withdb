@@ -1,0 +1,29 @@
+version: '3'
+services:
+    profile_app:
+        build: .
+        image: profileapp:0.1
+        ports:
+            - "5000:5000"
+        volumes:
+            - .:/python-docker
+        container_name: myprofile-app
+
+
+# To build only the image
+# docker-compose build
+
+# To run the docker container
+# docker-compose up -d
+
+# Stop services only
+# docker-compose stop
+
+# Stop and remove containers, networks..
+# docker-compose down 
+
+# Down and remove volumes
+# docker-compose down --volumes 
+
+# Down and remove images
+# docker-compose down --rmi <all|local> 
